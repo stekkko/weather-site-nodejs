@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Погода здесь</title>
+    <link href="style.css" rel="stylesheet"/>
+    <link rel="shortcut icon" href="images/icon.png" type="images/icon.png">
+    <script type="text/javascript" src="script.js"></script>
+</head>
+<body>
+    <header>
+        <div class="headerLeft">
+            <h1>Погода здесь</h1>
+        </div>
+        <div class="headerRight">
+            <button type="button" class="update_btn" id="refresh"><span>Обновить</span></button>
+        </div>
+    </header>
+
+    <main>
+        <div class="yourCity">
+            <div>
+                <h2>Данные загружаются</h2>
+                <img src="images/loading.gif"/>
+                <span class="temperature"></span>
+            </div>
+            <ul class="weather">
+                <li class="wind"><span class="bold">Ветер</span><span class="normal">...</span></li>
+                <li class="cloud"><span class="bold">Облачность</span><span class="normal">...</span></li>
+                <li class="pressure"><span class="bold">Давление</span><span class="normal">...</span></li>
+                <li class="humidity"><span class="bold">Влажность</span><span class="normal">...</span></li>
+                <li class="cords"><span class="bold">Координаты</span><span class="normal">...</span></li>
+            </ul>
+        </div>
+
+        <div class="add_favorite">
+            <div class="fav">
+                <h2>Избранное</h2>
+            </div>
+            <div class="search">
+                <form class="add_form" id="myForm">
+                    <input type="text" name="city" id="search_city" class="search_city" placeholder="Поиск" autocomplete="off">
+                    <button type="submit" class="add_button" id="submit_city"> </button>
+                </form>
+            </div>
+        </div>
+
+        <ul class="favorites">
+            <template id="tempCity">
+                <li class="favorite">
+                    <h3>Данные загружаются</h3>
+                    <span class="temperature"></span>
+                    <img src="images/loading.gif"/>
+                    <button type="button" class="delete"></button>
+                    <ul class="weather">
+                        <li class="wind"><span class="bold">Ветер</span><span class="normal">...</span></li>
+                        <li class="cloud"><span class="bold">Облачность</span><span class="normal">...</span></li>
+                        <li class="pressure"><span class="bold">Давление</span><span class="normal">...</span></li>
+                        <li class="humidity"><span class="bold">Влажность</span><span class="normal">...</span></li>
+                        <li class="cords"><span class="bold">Координаты</span><span class="normal">...</span></li>
+                    </ul>
+                </li>
+            </template>
+        </ul>
+    </main>
+</body>
+</html>

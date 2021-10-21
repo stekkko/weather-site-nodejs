@@ -1,0 +1,18 @@
+{
+  "name": "weather_site_server",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "stekkko",
+  "license": "ISC",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "express-generator": "^4.16.1",
+    "mongodb": "^3.7.3",
+    "request": "^2.88.2"
+  }
+}

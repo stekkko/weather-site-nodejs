@@ -1,0 +1,348 @@
+html {
+    font-family: sans-serif;
+}
+
+body {
+    margin-left: 20%;
+    margin-right: 20%;
+    width: 60%;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    display: flex;
+}
+
+header > div:nth-child(2) {
+    margin-left: auto;
+}
+
+h1 {
+    font-size: 30px;
+}
+
+.update_btn {
+    background-color: #ddd;
+    color: black;
+    font-size: 16px;
+    padding: 12px 40px;
+    border-radius: 12px;
+    border: none;
+}
+
+.update_btn:hover {
+    opacity: 0.8;
+    cursor: pointer;
+}
+
+main {
+    display: grid;
+}
+
+.yourCity {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 8%;
+}
+
+.weather {
+    display: grid;
+    grid-template-columns: 1fr;
+    align-content: space-between;
+    grid-gap: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.bold {
+    text-align: start;
+}
+
+.normal {
+    text-align: end;
+}
+
+.yourCity img {
+    width: 100%;
+    align-self: center;
+}
+
+.yourCity .temperature {
+    font-size: 120px;
+    align-self: center;
+}
+
+.yourCity .weather {
+    font-size: 20px;
+}
+
+.weather li {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    background-color: #deffdd;
+    color: #303030;
+    padding: 7px;
+}
+
+.yourCity .weather li{
+    padding: 10px;
+}
+
+.weather .bold {
+    justify-self: start;
+    font-weight: bold;
+    align-self: center;
+}
+
+.weather .normal {
+    justify-self: end;
+    align-self: center;
+}
+
+.yourCity > div{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.yourCity h2 {
+    font-size: 35px;
+    grid-column: 1/3;
+}
+
+
+.add_favorite {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.add_favorite .fav {
+    justify-self: start;
+    align-self: center;
+
+    font-size: 30px;
+    font-weight: normal;
+}
+
+.add_favorite .search {
+    justify-self: end;
+    align-self: center;
+}
+
+.add_form {
+    display: grid;
+    grid-template-columns: 1fr 45px;
+}
+
+#submit_city {
+    margin: 5px;
+    background-image: url("images/search.png");
+    height: 30px;
+    width: 30px;
+    background-size: 90%;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    background-color: transparent;
+    border: none;
+}
+
+#submit_city:hover {
+    cursor: pointer;
+    opacity: 0.8;
+}
+
+#submit_city:active {
+    background-size: 70%;
+}
+
+#search_city {
+    border: none;
+    padding: 10px;
+    background-color: #deffdd;
+    align-self: center;
+    border-radius: 6px;
+}
+
+.favorites {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: 8%;
+    grid-row-gap: 10px;
+}
+
+.favorite {
+    display: grid;
+    grid-template-columns: 45% 20% 20% 15%;
+}
+
+.favorite h3 {
+    align-self: center;
+    font-size: 20px;
+    word-wrap: anywhere;
+}
+
+.favorite > span {
+    align-self: center;
+    font-size: 35px;
+}
+
+.favorite img {
+    align-self: center;
+    justify-self: center;
+    width: 50%;
+}
+
+.favorite button {
+    justify-self: end;
+    align-self: center;
+}
+
+.delete {
+    margin: 5px;
+    background-image: url("images/cross.png");
+    height: 35px;
+    width: 35px;
+    background-size: 90%;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    background-color: transparent;
+    border: none;
+}
+
+.delete:active {
+    background-size: 70%;
+}
+
+button,
+button:active,
+button:focus {
+    outline: none;
+}
+
+.favorite ul{
+    grid-column: 1/5;
+}
+
+@media screen and (max-width: 1300px) {
+    .yourCity .temperature {
+        font-size: 80px;
+    }
+    .favorites .temperature {
+        font-size: 30px;
+    }
+}
+
+
+@media screen and (max-width: 1100px) {
+    body {
+        margin-left: 15%;
+        margin-right: 15%;
+        width: 70%;
+    }
+
+    .yourCity .temperature {
+        font-size: 60px;
+    }
+
+    .favorite .temperature {
+        font-size: 20px;
+    }
+}
+
+@media screen and (max-width: 950px) {
+    body {
+        margin-left: 10%;
+        margin-right: 10%;
+        width: 80%;
+    }
+
+    .yourCity .weather {
+        font-size: 15px;
+    }
+
+    .favorite .weather {
+        font-size: 13px;
+    }
+}
+
+@media screen and (max-width: 650px) {
+    h1 {
+        font-size: 25px;
+    }
+
+    .update_btn span {
+        display: none;
+    }
+
+    .update_btn {
+        background-image: url("images/update.png");
+        height: 50px;
+        width: 50px;
+
+        background-size: 60%;
+        background-repeat: no-repeat;
+        background-position: 50% 50%;
+        background-color: transparent;
+        border: none;
+    }
+
+    .yourCity {
+        grid-template-columns: 1fr;
+        grid-gap: 10px;
+    }
+
+    .yourCity .temperature {
+        font-size: 120px;
+    }
+
+    .yourCity .weather {
+        font-size: 20px;
+    }
+
+    .add_favorite {
+        grid-template-columns: 1fr;
+    }
+
+    .add_favorite .search {
+        justify-self: start;
+        width: 100%;
+    }
+
+    .add_favorite .add_form {
+        display: grid;
+        grid-template-columns: 1fr 45px;
+    }
+
+    .favorites {
+        grid-template-columns: 1fr;
+        grid-row-gap: 20px;
+    }
+
+    .favorite .temperature {
+        justify-self: center;
+        font-size: 28px;
+    }
+
+    .favorite .weather {
+        font-size: 15px;
+    }
+}
+
+@media screen and (max-width: 450px) {
+    .yourCity .temperature {
+        font-size: 70px;
+    }
+}
+
+@media screen and (max-width: 387px) {
+    .yourCity .temperature {
+        font-size: 80px;
+    }
+
+    .yourCity .weather {
+        font-size: 16px;
+    }
+}
